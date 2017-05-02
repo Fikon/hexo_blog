@@ -1,5 +1,5 @@
 ---
-title: C艹网络编程之epoll
+title: C++网络编程之epoll
 date: 2016-09-03 12:47:08
 tags: 那些年的坑
 categories: [学习心得, 网络编程]
@@ -83,7 +83,7 @@ void error(const char * str){
 // 将FD设置为非阻塞模式
 void set_nonblock(int fd){
   int flag;
-  flag = fcntl(fd, F_SETFL, 0);
+  flag = fcntl(fd, F_GETFL, 0);
   if(flag == -1){
     error("fcntl get flags")
   }
